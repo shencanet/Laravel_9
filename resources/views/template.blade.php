@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Proyecto Web</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Proyecto web</title>
 </head>
 <body>
-    <p> <a href="">Home</a>
-        <a href="">Blog</a>
-    </p>
-    <br>
-    @yield('content')
+	<p>
+		<a href="{{ route('home') }}">Home</a>
+		<a href="{{ route('blog') }}">Blog</a>
+	</p>
 
+	<hr>
+
+	@yield('content')
 </body>
 </html>

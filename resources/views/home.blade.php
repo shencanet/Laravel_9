@@ -1,6 +1,7 @@
-@@extends('template')
+@extends('template')
 
-@section()
+@section('content')
+
 <h1>Home</h1>
-</body>
-</html>
+
+@endsection
