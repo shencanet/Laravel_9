@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,15 +14,30 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/*
+Route::get | consulta
+Route::post | insertar
+Route::put | actualizar
+Route::delete | eliminar
+*/
+
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/hello', function () {
-    return 'Hello, World!';
+Route::get('/blog', function () {
+    return 'Listado Publicaciones';
 });
 
 
-Route::get('/hello/{name}', function ($name) {
-    return 'Hello, '.$name;
+Route::get('/blog/{name}', function ($slug) {
+    return 'Saludos, '.$slug;
+});
+
+//http://127.0.0.1:8000/blog/shen
+
+//http://127.0.0.1:8000/buscar?query=php
+
+Route::get('buscar', function (Request $request) {
+    return $request->all();
 });
