@@ -7,17 +7,10 @@
 	<title>Document</title>
 </head>
 <body>
-	<h1>Listado</h1>
+	<h1>Detalle</h1>
 
 	<hr>
 
-	@foreach( $posts as $post )
-	<p>
-		<strong>{{ $post['id'] }}</strong>
-		<a href="">
-			{{ $post['title'] }}
-		</a>
-	</p>
-	@endforeach
+	{{ $post }}
 </body>
 </html>
