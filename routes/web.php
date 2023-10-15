@@ -7,12 +7,7 @@ use Illuminate\Http\Request;
 |--------------------------------------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
+|*/
 
 /*
 Route::get | consulta
@@ -22,16 +17,23 @@ Route::delete | eliminar
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    //return view('welcome');
+    return view('home');
 });
 
 Route::get('/blog', function () {
-    return 'Listado Publicaciones';
+    $posts = [
+        ['id' => 1, 'title' => 'PHP', 'slug' => 'php'],
+        ['id' => 2, 'title' => 'Laravel', 'slug' => 'laravel']
+    ];
+    return view('blog', ['posts' => $posts]);
 });
 
 
-Route::get('/blog/{name}', function ($slug) {
-    return 'Saludos, '.$slug;
+
+Route::get('/blog/{slug}', function ($slug) {
+    $post = $slug;
+    return view('post', ['post' => $post]);
 });
 
 //http://127.0.0.1:8000/blog/shen
