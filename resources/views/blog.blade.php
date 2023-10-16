@@ -11,4 +11,5 @@
 		{{ $post['title'] }}
 	</a>
 </p>
+
 @endforeach
