@@ -31,7 +31,7 @@ Route::get('/blog', function () {
 
 
 
-Route::get('/blog/{slug}', function ($slug) {
+Route::get('blog/{slug}', function ($slug) {
     $post = $slug;
     return view('post', ['post' => $post]);
 })->name('post');
