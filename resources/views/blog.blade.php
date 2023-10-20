@@ -8,7 +8,8 @@
 <p>
 	<strong>{{ $post['id'] }}</strong>
 
-	<a href="">
+	<a href="{{ route('post', $post['slug']) }}">
+    
 
 		{{ $post['title'] }}
 	</a>
