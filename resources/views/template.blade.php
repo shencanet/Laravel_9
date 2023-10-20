@@ -8,8 +8,8 @@
 </head>
 <body>
 	<p>
-		<a href="home">Home</a>
-		<a href="blog">Blog</a>
+		<a href="{{ route('home') }}">Home</a>
+		<a href="{{ route('blog') }}">Blog</a>
 	</p>
 
 	<hr>
