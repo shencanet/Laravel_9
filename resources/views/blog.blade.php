@@ -7,8 +7,8 @@
 @foreach( $posts as $post )
 <p>
 	<strong>{{ $post['id'] }}</strong>
-	
-	<a href="{{ route('post', $post['slug']) }}">
+
+	<a href="">
 
 		{{ $post['title'] }}
 	</a>
@@ -16,3 +16,5 @@
 
 
 @endforeach
+
+@endsection
