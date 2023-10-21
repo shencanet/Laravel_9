@@ -20,7 +20,7 @@ Route::get('/', [PageController::class, 'home'])->name('home');
 
 Route::get('/blog', [PageController::class, 'blog'])->name('blog');
 
-Route::get('blog/{slug}',[PageController::class. 'post'] )->name('post');
+Route::get('blog/{slug}',[PageController::class, 'post'] )->name('post');
 
 //http://127.0.0.1:8000/blog/shen
 
