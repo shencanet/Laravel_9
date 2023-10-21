@@ -15,10 +15,11 @@ class Controller extends BaseController
 
     public function blog(){
 
-
+        return view('blog', ['posts' => $posts]);
     }
 
-    public function post(){
-
+    public function post($slug){
+        $post = $slug;
+        return view('post', ['post' => $post]);
     }
 }
