@@ -24,6 +24,7 @@ Route::get('blog/{slug}',[PageController::class, 'post'] )->name('post');
 
 //http://127.0.0.1:8000/blog/shen
 
+
 //http://127.0.0.1:8000/buscar?query=php
 
 Route::get('buscar', function (Request $request) {
