@@ -3,6 +3,13 @@ php artisan make:migration create_posts_table
 php artisan migrate:fresh
 
 
+Post::get();-> Trae todos los registros de la base de datos
+Post::frist();-> Trae el primer registro de la base de datos
+Post::find(id); -> Busca un registro en la base de datos por medio de su id
+Post::latest(); -> Trae todos los registros de la base de datos, y los ordena de forma descendente
+
+adicional, podemos utilizar el método paginate(), para realizar la paginación, solo no nos debemos de incluir en nuestras vistas la propiedad links() para que podamos visualizar los controles de paginación
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
