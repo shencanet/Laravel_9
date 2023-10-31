@@ -17,13 +17,12 @@ class PageController extends Controller
         $posts = Post::get();
         return view('blog', ['posts' => $posts]);
 
-	    
+
     }
 
-    public function post($slug)
+    public function post(Post $post)
     {
-    	// consulta en base de datos con el slug
-	    $post = $slug;
+    
 
 	    return view('post', ['post' => $post]);
     }
