@@ -1,8 +1,8 @@
 <?php
 
 namespace Database\Factories;
-use Illuminate\Support\Str;
 
+use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -15,12 +15,12 @@ class PostFactory extends Factory
      *
      * @return array<string, mixed>
      */
-    public function definition(): array
+    public function definition()
     {
         return [
-            'title'=> $this->faker->sentence(),
-            'slug'=> Str::slug($this->faker->sentence()),
-            'body'=> $this->faker->text(800),
+            'title'   => $title = $this->faker->sentence(),
+            'slug'  => Str::slug($title),
+            'body'  => $this->faker->text(2200)
         ];
     }
 }

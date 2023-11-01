@@ -2,6 +2,9 @@ php artisan migrate:refresh --seed
 php artisan make:migration create_posts_table
 php artisan migrate:fresh
 
+mysql -h localhost -u root -p
+cd C:\Program Files\MySQL\MySQL Workbench 8.0
+
 
 Post::get();-> Trae todos los registros de la base de datos
 Post::frist();-> Trae el primer registro de la base de datos
