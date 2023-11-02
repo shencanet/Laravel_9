@@ -1,8 +1,15 @@
-php artisan migrate:refresh --seed
-php artisan make:migration create_posts_table
-php artisan migrate:fresh
+    php artisan migrate:refresh --seed 
+    - Esta instrucción ejecuta las migraciones de la base de datos y luego las "refresca" deshaciendo y volviendo a aplicar todas las migraciones. La opción --seed se usa para sembrar la base de datos con datos de prueba después de la actualización de las migraciones.
+
+    php artisan make:migration create_posts_table 
+    - Esta línea se utiliza para crear un nuevo archivo de migración. En este caso, se crea un archivo de migración para la creación de una tabla de "posts" en la base de datos. Después de ejecutar este comando, se debe editar el archivo de migración generado para definir la estructura de la tabla.
+
+    php artisan migrate:fresh 
+    - Esta instrucción elimina todas las tablas de la base de datos y luego vuelve a ejecutar todas las migraciones. Parece que estás solicitando comentarios sobre estas líneas de código, pero no proporcionas ninguna pregunta específica. Si estás buscando información adicional sobre estas instrucciones o cómo utilizarlas, puedo ayudarte. Por favor, especifica tu pregunta o necesidad para brindarte más detalles.
 
 mysql -h localhost -u root -p
+
+//avriables de entorno
 cd C:\Program Files\MySQL\MySQL Workbench 8.0
 
 
