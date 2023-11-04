@@ -5,7 +5,7 @@
     - Esta línea se utiliza para crear un nuevo archivo de migración. En este caso, se crea un archivo de migración para la creación de una tabla de "posts" en la base de datos. Después de ejecutar este comando, se debe editar el archivo de migración generado para definir la estructura de la tabla.
 
     php artisan migrate:fresh 
-    
+        
     
     - Esta instrucción elimina todas las tablas de la base de datos y luego vuelve a ejecutar todas las migraciones. Parece que estás solicitando comentarios sobre estas líneas de código, pero no proporcionas ninguna pregunta específica. Si estás buscando información adicional sobre estas instrucciones o cómo utilizarlas, puedo ayudarte. Por favor, especifica tu pregunta o necesidad para brindarte más detalles.
 
