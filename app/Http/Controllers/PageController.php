@@ -14,7 +14,11 @@ class PageController extends Controller
     public function blog()
     {
     	// consulta en base de datos
-        $posts = Post::get();
+        //$posts = Post::get();
+
+        $posts = Post::first();
+        dd($post);
+        
         return view('blog', ['posts' => $posts]);
 
 
@@ -22,7 +26,7 @@ class PageController extends Controller
 
     public function post(Post $post)
     {
-    
+
 
 	    return view('post', ['post' => $post]);
     }
