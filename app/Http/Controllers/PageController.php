@@ -14,11 +14,11 @@ class PageController extends Controller
     public function blog()
     {
     	// consulta en base de datos
-        //$posts = Post::get();
-
-        $posts = Post::first();
-        dd($post);
-        
+        //$posts = Post::get();todos los registros
+        // $posts = Post::first();primer registro
+        //$posts = Post::first(25);// 25 registro
+        //dd($post);
+        $posts= Post::latest()->paginate(8);
         return view('blog', ['posts' => $posts]);
 
 
