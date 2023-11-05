@@ -11,7 +11,9 @@
 
     composer require laravel/breeze --dev dependencias breeze
     php artisan //aparecera la opcion breeze
+    php artisan breeze:install//comando instalacion
     
+
 
 mysql -h localhost -u root -p
 
