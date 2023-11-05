@@ -9,6 +9,10 @@
     
     - Esta instrucción elimina todas las tablas de la base de datos y luego vuelve a ejecutar todas las migraciones. Parece que estás solicitando comentarios sobre estas líneas de código, pero no proporcionas ninguna pregunta específica. Si estás buscando información adicional sobre estas instrucciones o cómo utilizarlas, puedo ayudarte. Por favor, especifica tu pregunta o necesidad para brindarte más detalles.
 
+    composer require laravel/breeze --dev dependencias breeze
+    php artisan //aparecera la opcion breeze
+    
+
 mysql -h localhost -u root -p
 
 //avriables de entorno
