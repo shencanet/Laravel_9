@@ -9,9 +9,8 @@
 <body>
 	<p>
 		<a href="{{ route('home') }}">Home</a>
-		
 
-		<a href="{{ route('blog') }}">Blog</a>
+	<a href="{{ route('blog') }}">Blog</a>
 	</p>
 
 	<hr>
