@@ -1,33 +1,28 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\Post;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
 {
-	public function home()
+	public function home(Request $request)
 	{
-    	return view('home');
+		// dd($_REQUEST);
+		// dd($request->all());
+		
+		$search = $request->search;
+
+		$posts = Post::where('title', 'LIKE', "%{$search}%")
+			->with('user')
+			->latest()->paginate();
+
+		return view('home', compact('posts'));
     }
 
-    public function blog()
+    public function post(Post $post) 
     {
-    	// consulta en base de datos
-        //$posts = Post::get();todos los registros
-        // $posts = Post::first();primer registro
-        //$posts = Post::first(25);// 25 registro
-        //dd($post);
-        $posts= Post::latest()->paginate(8);
-        return view('blog', ['posts' => $posts]);
-
-
-    }
-
-    public function post(Post $post)
-    {
-
-
-	    return view('post', ['post' => $post]);
+        return view('post', ['post' => $post]);
     }
 }
