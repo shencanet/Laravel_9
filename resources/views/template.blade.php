@@ -7,6 +7,7 @@
 	<title>Proyecto web</title>
 
 	<link rel="stylesheet" href="{{ asset('css/app.css') }}">
+
 </head>
 <body>
 	<div class="container px-4 mx-auto">
@@ -16,7 +17,7 @@
 					<img src="{{ asset('images/logo.png') }}" class="h-12">
 				</a>
 				<form action="{{ route('home') }}" class="flex-grow" method="GET">
-				    <input type="text" name="search" placeholder="Buscar" value="{{ request('search') }}" 
+				    <input type="text" name="search" placeholder="Buscar" value="{{ request('search') }}"
 				    class="border border-gray-200 rounded py-2 px-4 w-1/2"
 				    >
 				</form>
@@ -30,14 +31,14 @@
 		</header>
 
 		<div class="opacity-60 h-px mb-8" style="
-			background: linear-gradient(to right, 
+			background: linear-gradient(to right,
 				rgba(200, 200, 200, 0) 0%,
 				rgba(200, 200, 200, 1) 30%,
 				rgba(200, 200, 200, 1) 70%,
 				rgba(200, 200, 200, 0) 100%
 			);
 		">
-			
+
 		</div>
 
 		@yield('content')
