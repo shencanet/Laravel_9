@@ -2,13 +2,19 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PageController;
+use App\Http\Controllers\PostController;
 
 
-Route::get('/', function () {
-    return view('welcome');
+
+Route::controller(PageController::class)->group(function () {
+
+    Route::get('/',           'home')->name('home');
+    Route::get('blog',        'blog')->name('blog');
+    Route::get('blog/{post:slug}', 'post')->name('post');
 });
 
-Route::get('/shen', function () {
+Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
