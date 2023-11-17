@@ -7,8 +7,7 @@ use Illuminate\Http\Request;
 | Web Routes
 |--------------------------------------------------------------------------
 |*/
-
-/*
+php artisan route:list //da todas las rutas de tu App/*
 Route::get | consulta
 Route::post | insertar
 Route::put | actualizar
