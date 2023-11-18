@@ -2,26 +2,24 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Post;
+use App\Models\Post;//ACCESO CONSULTA TABLA POSTS
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
 class PostController extends Controller
 {
-    public function index() 
+    public function index()
     {
-    	return view('posts.index', [
-            'posts' => Post::latest()->paginate()
-        ]);
+    	return view('posts.index', ['posts' => Post::latest()->paginate()]);//CONSULTA TABLA POSTS
     }
 
-    public function create(Post $post) 
+    public function create(Post $post)
     {
         return view('posts.create', compact('post'));
     }
 
-    public function store(Request $request) 
+    public function store(Request $request)
     {
     	$request->validate([
     		'title' => 'required',
@@ -38,7 +36,7 @@ class PostController extends Controller
         return redirect()->route('posts.edit', $post);
     }
 
-    public function edit(Post $post) 
+    public function edit(Post $post)
     {
         return view('posts.edit', compact('post'));
     }
@@ -60,7 +58,7 @@ class PostController extends Controller
         return redirect()->route('posts.edit', $post);
     }
 
-    public function destroy(Post $post) 
+    public function destroy(Post $post)
     {
         $post->delete();
 
