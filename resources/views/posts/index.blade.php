@@ -22,7 +22,7 @@
                             </td>
                             <td class="px-6 py-4">
                             	<form action="{{ route('posts.destroy', $post) }}" method="POST">
-								    @csrf //TOKEN SEGURIDAD
+								    @csrf
 								    @method('DELETE')
 
 								    <input

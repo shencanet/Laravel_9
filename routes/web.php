@@ -14,7 +14,7 @@ Route::controller(PageController::class)->group(function () {
     Route::get('blog/{post:slug}', 'post')->name('post');
 });
 
-Route::resource('posts', PostController::class)->except(['show']);//no muestra ruta show
+Route::resource('posts', PostController::class)->except(['show']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
